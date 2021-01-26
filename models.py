@@ -2,6 +2,8 @@ from flask_sqlalchemy import SQLAlchemy
 
 DEFAULT_IMG = "https://mylostpetalert.com/wp-content/themes/mlpa-child/images/nophoto.gif"
 
+db = SQLAlchemy()
+
 #Create a single model, Pet. This models a pet potentially available for adoption:
 class Pet(db.Model):
     __tablename__ = "pets"
