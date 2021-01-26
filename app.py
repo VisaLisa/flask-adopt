@@ -13,3 +13,10 @@ connect_db(app)
 db.create_all()
 
 toolbar = DebugToolbarExtension(app)
+
+@app.route("/")
+def list_pet():
+    """list all pets"""
+
+    pets = Pet.query.all()
+    return render_template("pet_list.html", pets=pets)
